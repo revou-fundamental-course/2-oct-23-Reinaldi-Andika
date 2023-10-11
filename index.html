@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+    <title>Temperature Converter</title>
+</head>
+
+<body>
+    
+    <div class="container-fluid" >
+        
+        <h1 class="title">Temperature Converter  
+        <span class="Temperature-icon"><i class="fa-solid fa-temperature-three-quarters"></i></span> </h1>
+
+        <h2>Masukkan Suhu</h2>
+
+        <form onsubmit="return false">
+            <div class="form-convert">
+                <label for="input-convertion" id="label-input">Celsius (°C):</label>
+                
+                <textarea name="" id="ambilInputan" rows="5" placeholder="Masukkan dalam bentuk angka"></textarea>
+                <div class="selection-convert">
+                    <button class="hijau" type="button" onclick="tombolKonversi()">Konversi</button>
+                    <button class="merah" type="button" onclick="window.location.reload()">Reset</button>
+                    <button class="hitam" type="button" onclick="reverse()">Reverse</button>
+                </div>
+            </div>
+        </form>
+        <div class="result">
+            <label for="resultKonversion" id="label-result">Fahrenheit (°F):</label>
+            <textarea name="" id="hasilKonversi" rows="5" placeholder="Hasilnya ada disini" disabled></textarea>
+        </div>
+        <div class="how-convert">
+            <label for="howConvert">Cara Kalkulasi:</label>
+            <textarea name="" id="hasilKalkulasi" rows="5" placeholder="Cara kalkulasi disini" disabled></textarea>
+        </div>
+        <div class="explenation" id="explanations">
+            <h1 class="explenation-heading">Cara Konversi Dari Celcius (°C) ke Fahrenheit (°F)</h1>
+            <hr>
+            <p>
+                Suhu <span>S</span> dalam derajat Fahrenheit (°F) sama dengan suhu <span>S</span> dalam derajat <br>
+                Celsius (°C) kali 9/5 tambah 32
+            </p>
+            <p><span>S</span><sub>(°F)</sub>&ensp;=&ensp;(<span>S</span><sub>(°C)</sub> x 9/5 + 32)</p>
+            <p>atau</p>
+            <p><span>S</span><sub>(°F)</sub>&ensp;=&ensp;(<span>S</span><sub>(°C)</sub> x 1.8 + 32)</p>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
